@@ -1,0 +1,692 @@
+/* ==============메인페이지================ */
+body {
+  /* background-color: #1a1a1a; */
+  background-image: url(https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-dark-wwdc-2020-5120x2880-1432.jpg);
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+  color: #FFFFFF;
+}
+
+.sizefix {
+  overflow: hidden;
+  border-radius:10px;
+}
+
+.navbar.navbar-dark.navbar-expand-md.bg-dark {
+  background-color: #000;
+}
+
+.fa.fa-apple.apple-logo { 
+  font-size: 32px;
+  line-height: 0.8;
+}
+
+/* ====================== nav =========================== */
+
+.navbar-expand-md {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+
+.navmenu, .navmenu:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navmenu:before, .navli:before {
+  font-family: 'Material Icons' !important;
+  font-feature-settings: 'liga';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, :before, :after {
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.nav-item {
+  font-size: 18px;
+}
+.nav-item {
+  height: 50%;
+}
+.navmenu {
+  background: #474747;
+  height: 56px;
+  width: 56px;
+  border-radius: 5px;
+  color: #e6e6e6;
+  font-size: 2em;
+  cursor: pointer;
+}
+.navmenu:before {
+  content: '\E5D2';
+  font-size: inherit;
+}
+.navul {
+  background: inherit;
+  padding: 0.5em 0;
+  margin: 0;
+  margin-top: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: inherit;
+  font: 400 18px Roboto;
+  white-space: nowrap;
+  cursor: default;
+}
+.navul.hidden {
+  margin-top: 0.7em;
+  visibility: hidden;
+  opacity: 0;
+}
+.navul:before {
+  content: '';
+  width: 0.75em;
+  height: 0.75em;
+  background: inherit;
+  position: absolute;
+  top: -0.375em;
+  left: calc(56px / 2 - .375em);
+  transform: rotate(45deg);
+}
+.navli {
+  list-style: none;
+  padding: 0.5em;
+  padding-left: 2.5em;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+}
+.navli:before {
+  position: absolute;
+  top: calc(5% + 8px);
+  left: 8px;
+}
+.navli:nth-child(1):before {
+  content: '\E161';
+}
+.navli:nth-child(2):before {
+  content: '\E879';
+}
+.navli:nth-child(3):before {
+  content: '\E92B';
+}
+.navli:nth-child(4):before {
+  content: '\E80D';
+}
+.navli:hover {
+  background: rgba(255, 255, 255, .08);
+}
+
+
+
+/* ========================================================== */
+
+.btnmain {
+transform: scale(1);
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
+}
+
+.btnmain:hover {
+transform: scale(1.2);
+-webkit-transform: scale(1.2);
+-moz-transform: scale(1.2);
+-ms-transform: scale(1.2);
+-o-transform: scale(1.2);
+}
+
+.btnmain::before {
+position: absolute;
+top: 100%;
+left: 0%;
+transition: all 0.4s;
+z-index : -1;
+}
+.btnmain:hover::before {
+transform: translateY(-100%);
+}
+.box-wrap {
+/* border-radius:10px;  */
+/* width: 100vw;
+height: 100vh; */
+display: flex;
+justify-content: center;
+align-items: center
+}
+.box {
+border-radius:10px;
+position: relative;
+width: 100%;
+/* width: 400px; height: 300px; */
+/* border: 7px solid #283593; */
+box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+.box img {
+width:auto;
+height: auto;
+border-radius:10px;
+}
+
+.box .info {
+color: #fff;
+position: absolute; left: 0; bottom: 0;
+background: rgba(0,0,0,0.5);
+width: 100%;
+/* padding: 15px; */
+box-sizing: border-box;
+opacity: 0;
+transition: opacity 0.35s ease-in-out;
+}
+.box:hover .info {
+opacity: 1;
+}
+.box .info h3 {
+font-size: 1rem;
+padding-bottom: 0.4em;
+overflow:hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+text-transform: uppercase;
+}
+.box .info p {
+font-size: 10px;
+text-overflow: ellipsis;
+white-space: nowrap;
+text-transform: uppercase;
+}
+
+/* ============================== */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+.aclass {
+	cursor: pointer;
+  transition: all 200ms linear;
+}
+.aclass:hover {
+	text-decoration: none;
+}
+.link {
+  color: #575757;
+}
+.link:hover {
+  color: #000000;
+}
+.pclass {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.h4class {
+  font-weight: 600;
+}
+.h6class span{
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.section{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.full-height{
+  min-height: 100vh;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #ffeba7;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffeba7;
+  background-color: #cecece;
+  font-family: 'unicons';
+  content: '\eb4f';
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
+
+.card-3d-wrap {
+  position: relative;
+  width: 440px;
+  max-width: 100%;
+  height: 500px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin-top: 60px;
+}
+.card-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out;
+}
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #cecece;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  position: absolute;
+  border-radius: 6px;
+  left: 0;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+.center-wrap{
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
+}
+.form-group{
+  position: relative;
+  display: block;
+    margin: 0;
+    padding: 0;
+}
+.form-style {
+  padding: 13px 20px;
+  padding-left: 55px;
+  height: 48px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #747474;
+  border: none;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(165, 165, 165, 0.2);
+}
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(165, 165, 165, 0.2);
+}
+.input-icon {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  color: #ffeba7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input:-ms-input-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input::-moz-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:-moz-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input::-webkit-input-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus:-ms-input-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus::-moz-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus:-moz-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus::-webkit-input-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.logbtn{
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition : all 200ms linear;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  border: none;
+  background-color: #ffeba7;
+  color: #000000;
+  box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+}
+.logbtn:active,
+.logbtn:focus{
+  background-color: #aaaaaa;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+.logbtn:hover{
+  background-color: #aaaaaa;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+
+/* ============== 모달 ================ */
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: none;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  background-size: cover;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal_body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 850px;
+  padding: 40px;
+
+  text-align: center;
+
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  overflow-y:auto;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.modal img {
+  width:80%;
+  height: auto;
+}
+
+/* ============== 모달 mac ================ */
+
+.modalbody {
+  padding: 0px;
+  margin: 0px;
+  /* background: #222; */
+  background-color: rgb(0, 0, 0, 0.6);
+  font-family: "Ubuntu", sans-serif;
+  color: #FFF;
+
+}
+.modalbody * {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+.window {
+  max-width: 70%;
+  min-width: auto;
+  margin: 20px auto 0px auto;
+}
+.macos {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  animation: hide 1s, openwindows 0.25s;
+  animation-delay: 0s, 1s;
+}
+.macos .header {
+  display: flex;
+  border-radius: 5px 5px 0px 0px;
+  padding: 0px 8px;
+  background: linear-gradient(#f6f6f6, #e0dee0);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.01);
+  position: relative;
+  z-index: 1;
+  height: 25px;
+  line-height: 26px;
+}
+.macos .header .buttons {
+  width: 75px;
+  display: flex;
+}
+.macos .header .buttons:hover {
+  cursor: pointer;
+}
+.macos .header .buttons:hover i {
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+.macos .header .buttons:hover .close i {
+  background: #d86258;
+  color: #222;
+}
+.macos .header .buttons:hover .minus i {
+  background: #f0bd4e;
+  color: #222;
+}
+.macos .header .buttons:hover .expand i {
+  background: #64ca57;
+  color: #222;
+  transform: rotateZ(-45deg);
+}
+.macos .header .buttons .btn {
+  display: inline-block;
+  flex: 1;
+}
+.macos .header .buttons .btn i {
+  font-size: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  color: #ccc;
+  border: 1px solid #bbb;
+  width: 14px;
+  height: 14px;
+  line-height: 12px;
+  text-align: center;
+}
+.macos .header .title {
+  color: #666;
+  display: inline-block;
+  width: 100%;
+  height: 25px;
+}
+.macos .header .title .text, .macos .header .title .icon {
+  height: 25px;
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+}
+.macos .header .title .text i, .macos .header .title .icon i {
+  padding: 0px 3px;
+  position: relative;
+  top: 4px;
+  font-size: 18px;
+  color: #444;
+}
+.macos .form {
+  color: #FFFFFF;
+  min-height: 80px;
+  background: #1a1a1a;
+  border-radius: 0px 0px 5px 5px;
+  border-top: 1px solid #cdcdcd;
+}
+
+.modeldetail {
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid;
+  border-image: repeating-linear-gradient(135deg,#F8CA00 0 10%,#E97F02 0 20%,#BD1550 0 30%) 8;
+  -webkit-mask:
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+     var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+     0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: .1s, -webkit-mask-position .1s .1s;
+}
+
+.modeldetail:hover {
+  --_i: 100%;
+  color: #CC333F;
+  transition: .1s, -webkit-mask-size .2s .2s;
+}
+
+/* @keyframes hide {
+  to, from {
+    opacity: 0;
+  }
+} */
+/* @keyframes openwindows {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+
+
+/* ======  btn======= */
+
+.custombtn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.custombtn:hover, .custombtn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.fourth {
+  border-color: #f1c40f;
+  color: #fff;
+  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 300ms ease-in-out;
+}
+.fourth:hover {
+  background-position: 0;
+}
